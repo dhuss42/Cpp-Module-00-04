@@ -1,9 +1,6 @@
 # Cpp-Module-00
 Namespaces, classes, member functions, stdio streams, initialization lists, static, const, and some other basic stuff
 
-# Cpp-Module-00
-Namespaces, classes, member functions, stdio streams, initialization lists, static, const, and some other basic stuff
-
 ## ex00 [Megaphone](https://github.com/dhuss42/Cpp-Module-00-04/blob/main/ex00/megaphone.cpp)
 
 A Program that changes the lower-case characters of the input string into upper-case characters.
