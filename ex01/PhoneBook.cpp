@@ -6,7 +6,7 @@
 /*   By: dhuss <dhuss@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 14:41:44 by dhuss             #+#    #+#             */
-/*   Updated: 2024/12/18 14:34:47 by dhuss            ###   ########.fr       */
+/*   Updated: 2025/02/05 12:53:26 by dhuss            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	PhoneBook::add()
 		return ;
 	if (prompt("Enter nickname: ", &new_contact, NICKNAME) == -1)
 		return ;
-	if (prompt("Enter phonenbr: ", &new_contact, PHONENBR) == -1)
+	if (prompt("Enter phone number: ", &new_contact, PHONENBR) == -1)
 		return ;
 	if (prompt("Enter darkest secret: ", &new_contact, SECRET) == -1)
 		return ;
@@ -103,7 +103,7 @@ void	PhoneBook::retrive_contact(PhoneBook phonebook, int index)
 {
 	Contact	 contact;
 
-	if (index >= 0 && index <= 8)
+	if (index >= 0 && index <= 7)
 	{
 		contact = phonebook.getContact(index);
 		if (!contact.get_first_name().empty())
