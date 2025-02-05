@@ -6,7 +6,7 @@
 #    By: dhuss <dhuss@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/16 14:11:37 by dhuss             #+#    #+#              #
-#    Updated: 2024/12/18 13:15:29 by dhuss            ###   ########.fr        #
+#    Updated: 2025/02/05 15:34:08 by dhuss            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,8 @@ CC = g++
 CPPFLAGS = -Wall -Werror -Wextra -std=c++98
 CPPFILES = main.cpp\
 	PhoneBook.cpp\
-	Contact.cpp
+	Contact.cpp\
+	helpers.cpp
 OFILES = $(CPPFILES:.cpp=.o)
 NAME = phonebook
 

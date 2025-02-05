@@ -6,14 +6,11 @@
 /*   By: dhuss <dhuss@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 14:41:44 by dhuss             #+#    #+#             */
-/*   Updated: 2025/02/05 12:53:26 by dhuss            ###   ########.fr       */
+/*   Updated: 2025/02/05 15:56:23 by dhuss            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook.hpp"
-#include <iostream>
-#include <iomanip>
-#include <string>
+#include "helpers.hpp"
 
 int	PhoneBook::prompt(std::string str, Contact *new_contact, t_info info)
 {
@@ -27,7 +24,10 @@ int	PhoneBook::prompt(std::string str, Contact *new_contact, t_info info)
 		exit(EXIT_SUCCESS);
 	}
 	else if (input == "")
+	{
+		std::cout << "Error: No information entered. Returning to main menu.\n";
 		return (-1);
+	}
 	if (info == FIRSTNAME)
 		new_contact->set_first_name(input);
 	else if (info == LASTNAME)
@@ -35,7 +35,14 @@ int	PhoneBook::prompt(std::string str, Contact *new_contact, t_info info)
 	else if (info == NICKNAME)
 		new_contact->set_nickname(input);
 	else if (info == PHONENBR)
+	{
 		new_contact->set_phone_nbr(input);
+		if (!is_phonenbr(input))
+		{
+			std::cout << "Error: not a valid phone number. Returning to main menu.\n";
+			return (-1);
+		}
+	}
 	else if (info == SECRET)
 		new_contact->set_secret(input);
 	return (0);
@@ -59,27 +66,9 @@ void	PhoneBook::add()
 	contact_count++;
 }
 
-std::string truncate(const std::string str, size_t width)
+Contact	PhoneBook::getContact(int index)
 {
-	if (str.length() > width)
-	{
-		return (str.substr(0, width -1) + ".");
-	}
-	return (str);
-}
-
-bool	is_numeric(std::string str)
-{
-	size_t i;
-
-	i = 0;
-	while (i < str.size())
-	{
-		if (!std::isdigit(str[i]))
-			return (false);
-		i++;
-	}
-	return (true);
+	return (contacts[index]);
 }
 
 void	PhoneBook::print_contacts(PhoneBook phonebook)
@@ -101,7 +90,7 @@ void	PhoneBook::print_contacts(PhoneBook phonebook)
 
 void	PhoneBook::retrive_contact(PhoneBook phonebook, int index)
 {
-	Contact	 contact;
+	Contact	contact;
 
 	if (index >= 0 && index <= 7)
 	{
@@ -115,16 +104,16 @@ void	PhoneBook::retrive_contact(PhoneBook phonebook, int index)
 			std::cout << "Darkest secret: " << contact.get_secret() << std::endl;
 		}
 		else
-			std::cout << "Error: contact has not been created for that index\n";
+			std::cout << "Error: contact has not been created for that index. Returning to main menu.\n";
 	}
 	else
-		std::cout << "Error: Not valid index\n";
+		std::cout << "Error: Not valid index. Returning to main menu.\n";
 }
 
 void	PhoneBook::search(PhoneBook phonebook)
 {
-	std::string input;
-	int		 index;
+	std::string	input;
+	int			index;
 
 	print_contacts(phonebook);
 	std::cout << "Enter a valid index: ";
@@ -134,9 +123,14 @@ void	PhoneBook::search(PhoneBook phonebook)
 		std::cout << "\nInput stream closed. Exiting program.\n";
 		exit(EXIT_SUCCESS);
 	}
-	if (!is_numeric(input) || input == "")
+	if (input == "")
 	{
-		std::cout << "Error: Not a number\n";
+		std::cout << "Error: No information entered. Returning to main menu.\n";
+		return ;
+	}
+	if (!is_numeric(input))
+	{
+		std::cout << "Error: Not a number. Returning to main menu.\n";
 		return ;
 	}
 	index = std::stoi(input);

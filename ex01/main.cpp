@@ -6,11 +6,11 @@
 /*   By: dhuss <dhuss@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 14:42:05 by dhuss             #+#    #+#             */
-/*   Updated: 2024/12/18 13:21:20 by dhuss            ###   ########.fr       */
+/*   Updated: 2025/02/05 15:54:59 by dhuss            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook.hpp"
+#include "helpers.hpp"
 
 int main()
 {
@@ -32,6 +32,8 @@ int main()
 			phonebook.search(phonebook);
 		else if (cmd == "EXIT")
 			exit(EXIT_SUCCESS);
+		else if (cmd == "")
+			std::cout << "";
 		else
 			std::cout << "Error: Invalid command\n";
 	}
@@ -40,9 +42,9 @@ int main()
 
 //if(std::cin.eof() || std::cin.fail())
 
-// When using the terminal, Ctrl+D, sends an EOF signal to the program. 
+// When using the terminal, Ctrl+D, sends an EOF signal to the program.
 // -> no further input is expected.
-// If input buffer is empty when Ctrl+D is pressed, 
+// If input buffer is empty when Ctrl+D is pressed,
 // -> tells std::cin that it has reached the end of the input.
 
 // std::cin.eof()

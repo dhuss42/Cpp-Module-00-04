@@ -6,13 +6,11 @@
 /*   By: dhuss <dhuss@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 13:05:05 by dhuss             #+#    #+#             */
-/*   Updated: 2024/12/18 13:16:10 by dhuss            ###   ########.fr       */
+/*   Updated: 2025/02/05 15:35:31 by dhuss            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Contact.hpp"
-#include <string>
-#include <iostream>
+#include "helpers.hpp"
 
 void	Contact::set_first_name(std::string input)
 {
