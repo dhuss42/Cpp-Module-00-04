@@ -6,15 +6,12 @@
 /*   By: dhuss <dhuss@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 14:40:19 by dhuss             #+#    #+#             */
-/*   Updated: 2025/02/05 16:02:05 by dhuss            ###   ########.fr       */
+/*   Updated: 2025/02/07 10:05:22 by dhuss            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_HPP
 #define CONTACT_HPP
-
-#include <string>
-#include <iostream>
 
 class Contact
 {

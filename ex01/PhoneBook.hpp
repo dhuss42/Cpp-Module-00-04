@@ -6,14 +6,12 @@
 /*   By: dhuss <dhuss@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 14:11:00 by dhuss             #+#    #+#             */
-/*   Updated: 2025/02/05 15:55:19 by dhuss            ###   ########.fr       */
+/*   Updated: 2025/02/07 10:03:14 by dhuss            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHONEBOOK_HPP
 #define PHONEBOOK_HPP
-
-#include "helpers.hpp"
 
 typedef enum e_info {
 	FIRSTNAME,
