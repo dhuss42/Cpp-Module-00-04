@@ -6,17 +6,13 @@
 /*   By: dhuss <dhuss@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 12:24:24 by dhuss             #+#    #+#             */
-/*   Updated: 2025/02/07 10:40:17 by dhuss            ###   ########.fr       */
+/*   Updated: 2025/02/07 10:56:02 by dhuss            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Account.hpp"
 #include <iostream>
 #include <ctime>
-//	 makeDeposit(int): Adds the deposit amount to the account balance.
-//	 makeWithdrawal(int): subtract the amount from the balance, likely with checks for sufficient funds.
-//	 displayStatus(): Outputs details of an account (e.g., balance, account number).
-//	 displayAccountsInfos(): A static method that aggregates and displays data for all accounts.
 
 int Account::_nbAccounts = 0;
 int Account::_totalAmount = 0;

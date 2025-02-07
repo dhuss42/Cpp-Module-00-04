@@ -6,7 +6,7 @@
 /*   By: dhuss <dhuss@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 14:42:05 by dhuss             #+#    #+#             */
-/*   Updated: 2025/02/07 10:07:46 by dhuss            ###   ########.fr       */
+/*   Updated: 2025/02/07 10:55:41 by dhuss            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,3 @@ int main()
 	}
 	return (0);
 }
-
-//if(std::cin.eof() || std::cin.fail())
-
-// When using the terminal, Ctrl+D, sends an EOF signal to the program.
-// std::cin.eof() indicates the stream ended (no more data).
-// std::cin.fail() indicates an error occurred in reading or processing input.
